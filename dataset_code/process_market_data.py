@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import pickle
+import os
+from scipy import interpolate
 
 def replace_price_0_to_nan(df):
     # For the price data, if it is 0, assign the value to nan and leave it to the subsequent interpolation fillNAN module for processing
